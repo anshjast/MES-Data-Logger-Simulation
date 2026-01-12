@@ -1,9 +1,9 @@
-MES Data Logger Simulation
+# MES Data Logger Simulation
 
 A lightweight backend system simulating real-time Manufacturing Execution System (MES) data ingestion.
 
 
-🚀 Overview
+## 🚀 Overview
 
 This project simulates how real-world operational systems ingest, process, and store event-based data.
 A Python-based simulator generates machine telemetry and sends it to a Flask REST API, which logs the data into a local SQLite database.
@@ -11,7 +11,7 @@ A Python-based simulator generates machine telemetry and sends it to a Flask RES
 The focus is on automation, reliability, and structured data pipelines — concepts that are foundational to backend systems and GTM/event-tracking workflows.
 
 
-🧠 What This Project Demonstrates
+## 🧠 What This Project Demonstrates
 
 1. API-first backend design
 2. Event-driven data ingestion
@@ -21,15 +21,28 @@ The focus is on automation, reliability, and structured data pipelines — conce
 6. Basic fault handling and logging
 
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 1. Backend: Python, Flask
 2. Database: SQLite
 3. Communication: REST APIs, JSON
 4. Automation: Python-based simulator client
 
+## 🏗️ System Architecture
 
-▶️ How to Run
+```text
+[Machine Simulator]
+        |
+        |  JSON events via HTTP POST
+        v
+[Flask REST API]
+        |
+        v
+[SQLite Database]
+```
+
+
+## ▶️ How to Run
 1. Start the API server
    python app.py
 
@@ -42,8 +55,9 @@ The focus is on automation, reliability, and structured data pipelines — conce
 4. The simulator sends mock machine data every few seconds
 
 
-📦 Sample Data Payload
+## 📦 Sample Data Payload
 
+```json
 {
   "machine_id": "LINE-1-WELDER",
   "timestamp": "2025-11-09T10:15:30",
@@ -51,9 +65,11 @@ The focus is on automation, reliability, and structured data pipelines — conce
   "parts_produced_count": 320,
   "motor_temp_celsius": 67.4
 }
+```
 
 
-📈 Why This Matters
+
+## 📈 Why This Matters
 
 Although modeled on manufacturing systems, this architecture mirrors how:
 
@@ -64,7 +80,7 @@ Analytics platforms track user actions
 Automation pipelines process operational signals
 
 
-🔮 Possible Extensions
+## 🔮 Possible Extensions
 
 Dashboard for live monitoring
 
@@ -75,6 +91,6 @@ Alerting on error states
 Authentication and validation layers
 
 
-👤 Author
+## 👤 Author
 
 Ansh Jast
